@@ -62,7 +62,7 @@ const ChatInterface = ({ heroine, onBack }) => {
             options: [
               { id: "a", text: "Это было интересно!", next: null },
               { id: "b", text: "Расскажи больше о себе", next: null },
-              { id: "c", text: "Может встретимся?", next: null },
+              { id: "c", text: "Можем встретимся?", next: null },
             ],
           };
           setCurrentChoices(nextChoices.options);
