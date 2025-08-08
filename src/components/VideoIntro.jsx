@@ -68,7 +68,7 @@ const VideoIntro = ({ onVideoPause }) => {
           playsInline
           autoPlay
           style={{ objectPosition: "center" }}
-          poster="/intro.png"
+          poster={`${import.meta.env.VITE_BASE_URL}/intro.png`}
         >
           <source src={`${import.meta.env.VITE_BASE_URL}/intro.mp4`} type="video/mp4" />
         </video>
