@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react-swc";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-  base: '/rin-landing/',
+  base: process.env.VITE_BASE_URL,
   plugins: [react(), tailwindcss()],
   publicDir: './public',
   server: {

@@ -70,7 +70,7 @@ const VideoIntro = ({ onVideoPause }) => {
           style={{ objectPosition: "center" }}
           poster="/intro.png"
         >
-          <source src="/intro.mp4" type="video/mp4" />
+          <source src={`${import.meta.env.VITE_BASE_URL}/intro.mp4`} type="video/mp4" />
         </video>
 
         {isVideoLoading && (

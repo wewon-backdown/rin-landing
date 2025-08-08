@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { MessageCircle, Heart, Home, User, Settings } from "lucide-react";
 import ChatInterface from "./ChatInterface";
-import * as mock from "@/mock"
+import * as mock from "@/mock";
 
 const PhoneInterface = ({ isVisible, onClose }) => {
   const [currentScreen, setCurrentScreen] = useState("home");
@@ -37,7 +37,9 @@ const PhoneInterface = ({ isVisible, onClose }) => {
       style={
         isImageBg
           ? {
-              backgroundImage: "url(/intro.png)",
+              backgroundImage: `url(${
+                import.meta.env.VITE_BASE_URL
+              }/intro.png)`,
               backgroundSize: "cover",
               backgroundPosition: "center center",
             }
