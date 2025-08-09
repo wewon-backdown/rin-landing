@@ -18,10 +18,9 @@ const VideoIntro = ({ onVideoPause }) => {
       const handlePlaying = () => setIsVideoLoading(false);
 
       const handleTimeUpdate = () => {
-        if (video.currentTime >= 8 || video.ended) {
+        if (video.currentTime >= 4 || video.ended) {
           video.pause();
           setIsVideoPlaying(false);
-          setIsVideoWaitBgViewed(true);
           onVideoPause();
         }
       };

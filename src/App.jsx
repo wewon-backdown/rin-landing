@@ -11,8 +11,10 @@ function App() {
   const [showMainPage, setShowMainPage] = useState(false);
 
   const handleVideoPause = () => {
-    setVideoFinished(true);
     setShowPhone(true);
+    setTimeout(() => {
+      setVideoFinished(true);
+    }, 500);
   };
 
   const handlePhoneClose = () => {

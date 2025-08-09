@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { MessageCircle, Heart, Home, User, Settings } from "lucide-react";
+import { MessageCircle, Heart, Home, User } from "lucide-react";
 import ChatInterface from "./ChatInterface";
 import * as mock from "@/mock";
 
@@ -24,6 +24,9 @@ const PhoneInterface = ({ isVisible, onClose }) => {
       setSelectedHeroine(null);
     }
   };
+
+  console.log("Current screen:", currentScreen, isVisible);
+  console.log("Selected heroine:", selectedHeroine);
 
   return (
     <div
