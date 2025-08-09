@@ -18,8 +18,8 @@ function App() {
   };
 
   const handlePhoneClose = () => {
-    setShowPhone(false);
     setShowMainPage(true);
+    setShowPhone(false);
   };
 
   const handleCTAClick = (action) => {
@@ -76,7 +76,7 @@ function App() {
             <div className="absolute top-40 right-20 w-64 h-64 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse delay-1000"></div>
             <div className="absolute bottom-40 left-1/2 w-64 h-64 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse delay-2000"></div>
 
-            <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
+            <div className="relative z-10 text-center max-w-4xl mx-auto mt-12 px-6">
               <div className="mb-8">
                 <h1 className="text-6xl font-bold text-gray-800 mb-6 leading-tight">
                   Добро пожаловать в
