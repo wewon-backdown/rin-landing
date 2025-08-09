@@ -25,9 +25,6 @@ const PhoneInterface = ({ isVisible, onClose }) => {
     }
   };
 
-  console.log("Current screen:", currentScreen, isVisible);
-  console.log("Selected heroine:", selectedHeroine);
-
   return (
     <div
       className={`fixed inset-0 z-50 flex items-center justify-center transition-all duration-700 ease-in-out ${
@@ -37,20 +34,20 @@ const PhoneInterface = ({ isVisible, onClose }) => {
           ? "bg-opacity-50 backdrop-blur-sm"
           : "bg-opacity-0 backdrop-blur-none"
       }`}
-      style={
-        isImageBg
-          ? {
-              backgroundImage: `url(${
-                import.meta.env.VITE_BASE_URL
-              }/intro.png)`,
-              backgroundSize: "cover",
-              backgroundPosition: "center center",
-            }
-          : undefined
-      }
     >
       <div
-        className={`relative transform transition-all duration-700 ease-in-out ${
+        className={`absolute inset-0 z-0 transition-all duration-700 ease-in-out ${
+          isImageBg ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
+        style={{
+          backgroundImage: `url(${import.meta.env.VITE_BASE_URL}/intro.png)`,
+          backgroundSize: "cover",
+          backgroundPosition: "center center",
+        }}
+        aria-hidden="true"
+      />
+      <div
+        className={`relative z-10 transform transition-all duration-700 ease-in-out ${
           isVisible
             ? "scale-100 translate-y-0 opacity-100"
             : "scale-75 translate-y-8 opacity-0"
@@ -59,7 +56,12 @@ const PhoneInterface = ({ isVisible, onClose }) => {
         <div className="w-80 h-[680px] bg-gradient-to-br from-gray-900 to-black rounded-[3rem] p-3 shadow-2xl">
           <div className="w-full h-full bg-gradient-to-br from-white to-gray-100 rounded-[2.5rem] overflow-hidden relative">
             <div className="h-8 pointer-events-none select-none bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-between px-6 text-white text-sm font-medium">
-              <span>9:41</span>
+              <span>
+                {new Date().toLocaleTimeString("ru", {
+                  hour: "2-digit",
+                  minute: "2-digit",
+                })}
+              </span>
               <span>📶 🔋 100%</span>
             </div>
 

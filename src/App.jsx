@@ -19,9 +19,7 @@ function App() {
 
   const handlePhoneClose = () => {
     setShowPhone(false);
-    setTimeout(() => {
-      setShowMainPage(true);
-    }, 300);
+    setShowMainPage(true);
   };
 
   const handleCTAClick = (action) => {
